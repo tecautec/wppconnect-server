@@ -28,5 +28,5 @@ RUN yarn build
 # Porta padrão do wppconnect-server
 EXPOSE 21465
 
-# Inicia em produção
-CMD ["yarn", "start:prod"]
+# Tenta start:prod, senão start, senão roda dist direto
+CMD ["sh", "-lc", "yarn start:prod || yarn start || node dist/server.js"]
