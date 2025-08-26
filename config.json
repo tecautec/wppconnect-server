@@ -1,0 +1,42 @@
+{
+  "secretKey": "CHANGE_ME",                          // troque por algo forte (usado p/ token query opcional)
+  "startAllSessions": false,
+
+  "webhook": {
+    "enabled": false,
+    "url": ""
+  },
+
+  "log": { "level": "info" },
+
+  "browser": {
+    "headless": true,
+    "executablePath": "/usr/bin/google-chrome",
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--single-process",
+      "--no-zygote",
+      "--disable-features=site-per-process",
+      "--ignore-certificate-errors"
+    ]
+  },
+
+  "whatsapp": {
+    "deviceName": "VendeFlex",
+    "poweredBy": "VendeFlex"
+  },
+
+  "sessions": {
+    "dir": "/data/sessions",         // **vamos montar um disco do Railway aqui**
+    "autoClose": 600000              // fecha sessão ociosa após 10min (ajuste se quiser)
+  },
+
+  "qr": {
+    "refreshInterval": 5000,
+    "logQR": false,
+    "format": "png"                  // facilita exibir direto no seu front
+  }
+}
