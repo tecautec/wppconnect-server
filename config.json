@@ -1,5 +1,5 @@
 {
-  "secretKey": "CHANGE_ME",                          // troque por algo forte (usado p/ token query opcional)
+  "secretKey": "vf123456",                          // troque por algo forte (usado p/ token query opcional)
   "startAllSessions": false,
 
   "webhook": {
