@@ -1,4 +1,10 @@
 .git
+node_modules
+npm-debug.log
+yarn-error.log
+Dockerfile
+.dockerignore
+.git
 .github
 .hust
 *.tgz
