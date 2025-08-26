@@ -1,5 +1,5 @@
 {
-  "secretKey": "vf123456",                          // troque por algo forte (usado p/ token query opcional)
+  "secretKey": "VF_3KuwpQGJ6s8nVZkX0b9H4rA2pT",
   "startAllSessions": false,
 
   "webhook": {
