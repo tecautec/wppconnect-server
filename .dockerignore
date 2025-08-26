@@ -7,3 +7,28 @@ log
 node_modules
 npm-debug.log
 tokens
+
+# dependências & caches
+node_modules
+npm-debug.log
+yarn.lock
+.pnpm-store
+.cache
+
+# VCS / metadata
+.git
+.github
+
+# testes / build
+coverage
+dist
+build
+tests
+test
+
+# arquivos locais
+.env
+.DS_Store
+
+# sessões (se você versionar a pasta /data, remova esta linha)
+data
