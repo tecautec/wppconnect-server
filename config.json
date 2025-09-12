@@ -3,8 +3,8 @@
   "startAllSessions": false,
 
   "webhook": {
-    "enabled": false,
-    "url": ""
+    "enabled": true,
+    "url": "https://vendeflex.com/api/wpp/webhook"
   },
 
   "log": { "level": "info" },
@@ -30,13 +30,13 @@
   },
 
   "sessions": {
-    "dir": "/data/sessions",         // **vamos montar um disco do Railway aqui**
-    "autoClose": 600000              // fecha sessão ociosa após 10min (ajuste se quiser)
+    "dir": "/data/sessions",
+    "autoClose": 600000
   },
 
   "qr": {
     "refreshInterval": 5000,
     "logQR": false,
-    "format": "png"                  // facilita exibir direto no seu front
+    "format": "png"
   }
 }
