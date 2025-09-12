@@ -1,5 +1,5 @@
-# Node 22 (requerido pelo wppconnect/server)
-FROM node:22-bookworm
+# Usa exatamente a versão exigida pelo @wppconnect/server
+FROM node:22.18.0-bookworm
 
 # Instala Google Chrome + libs necessárias para headless
 RUN apt-get update \
@@ -21,12 +21,14 @@ ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome
 WORKDIR /app
 COPY . .
 
-# Ignora checagem de "engines" caso o yarn do lock tenha regra diferente
+# Instala dependências (mantive o ignore-engines por segurança)
 RUN yarn install --frozen-lockfile --ignore-engines
+
+# Build do servidor
 RUN yarn build
 
 # Porta padrão do wppconnect-server
 EXPOSE 21465
 
-# Tenta start:prod, senão start, senão roda dist direto
+# Inicia o serviço (tenta scripts comuns)
 CMD ["sh", "-lc", "yarn start:prod || yarn start || node dist/server.js"]
